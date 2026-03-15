@@ -21,7 +21,7 @@ This project is a comprehensive language processing pipeline developed as part o
 The core objective was to move beyond hardcoded conditional logic by implementing a formal compilation pipeline. The engine treats player commands as a language to be parsed, validated, and executed.
 
 <p align="center">
-  <img src="./Assets/instr.png" alt="exemple lexer" width="600">
+  <img src="./Assets/Instr.png" alt="exemple lexer" width="600">
 </p>
 
 
