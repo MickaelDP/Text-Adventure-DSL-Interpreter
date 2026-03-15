@@ -64,6 +64,13 @@ The Interpreter acts as the execution engine.
 * **State Management**: Modifies the game_state dictionary in real-time.
 * **Dynamic Context**: Executes lambdas from game.py during the "Look" and "Move" actions, ensuring that if an item is picked up, the room description updates immediately.
 
+## 🧩 Engine Agnosticism & Modular Design
+
+Beyond the "Mansion" scenario, this engine's core is strictly decoupled from the game data. The pipeline is designed to be **domain-agnostic**:
+
+* **Versatility**: While currently configured for interactive fiction, the Lexer/Parser logic could be redirected to control **Smart Home automation** (e.g., `USE "light" WITH "off"`) or **Industrial Workflows**.
+* **Plug-and-Play Data**: By simply swapping the `game.py` dictionary and adjusting the Preprocessor translation matrix, the entire system can interpret a completely different set of instructions and logic without touching the core compiler code.
+
 ## 🛠 Features & Innovation
 * **Lazy Programming**: Descriptions are not static strings but executable functions. This allows for complex logic within the data (e.g., "If the bulldog is asleep, the rug is visible").
 * **Hybrid Parser**: The grammar is designed to be permissive with "natural" phrasing while maintaining the strictness required for a DSL.
@@ -97,10 +104,3 @@ Launch the game engine:
  <p align="center">
   <img src="./Assets/invattw.png" alt="action command" width="600">
 </p>   
-
-## 🧩 Engine Agnosticism & Modular Design
-
-Beyond the "Mansion" scenario, this engine's core is strictly decoupled from the game data. The pipeline is designed to be **domain-agnostic**:
-
-* **Versatility**: While currently configured for interactive fiction, the Lexer/Parser logic could be redirected to control **Smart Home automation** (e.g., `USE "light" WITH "off"`) or **Industrial Workflows**.
-* **Plug-and-Play Data**: By simply swapping the `game.py` dictionary and adjusting the Preprocessor translation matrix, the entire system can interpret a completely different set of instructions and logic without touching the core compiler code.
